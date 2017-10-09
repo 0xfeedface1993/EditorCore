@@ -10,6 +10,8 @@
 		273724471F8B209A00EFADFD /* EditorCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2737243D1F8B209A00EFADFD /* EditorCore.framework */; };
 		2737244C1F8B209A00EFADFD /* EditorCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2737244B1F8B209A00EFADFD /* EditorCoreTests.swift */; };
 		2737244E1F8B209A00EFADFD /* EditorCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 273724401F8B209A00EFADFD /* EditorCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		273724611F8B20B200EFADFD /* Editor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273724601F8B20B200EFADFD /* Editor.swift */; };
+		273724811F8B431A00EFADFD /* ImageMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273724801F8B431A00EFADFD /* ImageMaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		273724461F8B209A00EFADFD /* EditorCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EditorCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2737244B1F8B209A00EFADFD /* EditorCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorCoreTests.swift; sourceTree = "<group>"; };
 		2737244D1F8B209A00EFADFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		273724601F8B20B200EFADFD /* Editor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editor.swift; sourceTree = "<group>"; };
+		273724801F8B431A00EFADFD /* ImageMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				273724401F8B209A00EFADFD /* EditorCore.h */,
 				273724411F8B209A00EFADFD /* Info.plist */,
+				273724601F8B20B200EFADFD /* Editor.swift */,
+				273724801F8B431A00EFADFD /* ImageMaker.swift */,
 			);
 			path = EditorCore;
 			sourceTree = "<group>";
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					2737243C1F8B209A00EFADFD = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					273724451F8B209A00EFADFD = {
@@ -196,6 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				273724811F8B431A00EFADFD /* ImageMaker.swift in Sources */,
+				273724611F8B20B200EFADFD /* Editor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -321,7 +330,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -334,6 +343,7 @@
 		273724521F8B209A00EFADFD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -347,6 +357,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ascp.EditorCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,6 +367,7 @@
 		273724531F8B209A00EFADFD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -368,6 +381,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ascp.EditorCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -376,6 +390,7 @@
 		273724551F8B209A00EFADFD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A272626J38;
 				INFOPLIST_FILE = EditorCoreTests/Info.plist;
@@ -390,6 +405,7 @@
 		273724561F8B209A00EFADFD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A272626J38;
 				INFOPLIST_FILE = EditorCoreTests/Info.plist;
